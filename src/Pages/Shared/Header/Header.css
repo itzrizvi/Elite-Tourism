@@ -1,0 +1,143 @@
+/********* Header Main CSS **********/
+
+/*TOP BAR CSS*/
+.top-bar {
+    background-color: #2b2b2b;
+    padding-top: 10px;
+}
+
+header.head-main {
+    color: #FFFFFF;
+}
+
+ul.schedule-list {
+    margin: 0;
+    padding: 0;
+}
+
+ul.schedule-list li {
+    list-style: none;
+    padding: 0px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+ul.schedule-list li:hover{
+    color: #c29d59;
+}
+
+ul.schedule-list li span {
+    color: #c29d59;
+    font-size: 15px;
+}
+
+.top-bar-right-inner {
+    text-align: right;
+}
+
+.top-bar-right-inner a {
+    text-decoration: none;
+    padding: 0px 8px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.top-bar-right-inner a:hover{
+    color: #c29d59;
+}
+
+a.before-effect {
+    border-left: 2px solid #c29d59;
+}
+
+/* Nav Menu CSSS */
+
+.logo h2 span {
+    color: #c29d59;
+}
+
+.logo h2 {
+    color: #2e2e2e;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.nav-menu a.nav-link {
+    text-decoration: none;
+    color: #2e2e2e;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: .5s;
+}
+
+.nav-menu a.nav-link:hover{
+    color: #C29D59;
+}
+
+.menu-inner {
+    background-color: #FFFFFF;
+    padding: 10px 10px;
+    border: 2px solid #2e2e2e;
+    border-bottom: 5px solid #C29D59;
+}
+
+.nav-menu-area {
+    position: relative;
+    display: block;
+    padding-top: 20px;
+    z-index: 2;
+}
+
+.nav-menu-area::after {
+    position: absolute;
+    width: 100%;
+    height: 85px;
+    background-color: #2b2b2b;
+    content: "";
+    top: 0px;
+    z-index: -1;
+}
+
+button:focus:not(:focus-visible) {
+    box-shadow: none;
+    border: 2px solid #C29D59 !important;
+}
+
+button.navbar-toggler {
+    border: 2px solid #2e2e2e;
+    box-shadow: none;
+    border-color: #2e2e2e !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+/***** RESPONSIVE CSS ****/
+@media screen and (max-width:767px){
+    ul.schedule-list {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .top-bar-right-inner {
+        text-align: center;
+    }
+    .nav-menu-area::after{
+        height: 105px;
+    }
+}
+@media screen and (max-width:406px){
+    ul.schedule-list {
+        display: block !important;
+        text-align: center;
+    }
+}

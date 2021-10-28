@@ -1,0 +1,68 @@
+/*********** Banner Carousel CSS ***********/
+.carousel-section {
+    margin-top: -20px;
+    z-index: 1;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,0.5);
+    right: 0px !important;
+    left: 0px !important;
+    top: 0px !important;
+    bottom: 0px !important;
+    margin: auto;
+    width: 50% !important;
+    height: 200px !important;
+    padding: 10px 5px !important;
+}
+
+.carousel-caption h3 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.carousel-caption p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.carousel-indicators {
+    display: none !important;
+}
+
+
+
+/******** BANNER RESPONSIVE ********/
+@media screen and (max-width:790px){
+    .carousel-caption h3 {
+        font-size: 20px;
+    }
+    
+    .carousel-caption p {
+        font-size: 14px;
+    }
+    
+    .carousel-caption {
+        width: 80% !important;
+        height: 150px !important;
+    }
+
+}
+@media screen and (max-width:767px){
+    .carousel-section {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width:475px){
+    .carousel-item img{
+        height: 240px !important;
+    }
+}
+
+@media screen and (max-width:325px){
+    .carousel-caption {
+        height: 230px !important;
+    }
+}
