@@ -1,0 +1,16 @@
+/********* Packages CSS ************/
+
+.packages-section{
+    background: #f2efe9 url('../../../images/packagebg/pattern.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    font-weight: 700;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #C29D59;
+    display: inline-block;
+    margin-bottom: 70px;
+}

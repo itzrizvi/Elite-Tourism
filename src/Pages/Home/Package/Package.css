@@ -1,0 +1,120 @@
+/*********** PACKAGE CSS ************/
+.package-inner {
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.price {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 95px;
+    font-size: 14px;
+    color: #C29D59;
+    box-shadow: 0px 10px 10px rgb(0 0 0 / 10%);
+    top: 29%;
+    right: 2%;
+    font-weight: 700;
+}
+.package-inner .details {
+    padding: 30px 20px;
+    height: 300px;
+}
+
+.details h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e2e2e;
+}
+
+p.destination {
+    color: #C29D59;
+    font-size: 14px;
+    word-spacing: 2px;
+    font-weight: 400;
+}
+
+p.duration {
+    color: #C29D59;
+    font-size: 16px;
+    margin-top: 16px;
+    font-weight: 500;
+}
+
+p.facilities {
+    background-color: #f4f4f4;
+    padding: 20px 10px;
+    text-align: center;
+    word-spacing: 6px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+p.facilities span{
+    color: #C29D59;
+}
+
+.details button {
+    margin-top: 13px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #C29D59;
+    padding: 6px 30px;
+    transition: .5s;
+    border: 1px solid transparent;
+}
+
+.details button:hover {
+    background-color: transparent;
+    border: 1px solid #C29D59;
+    color: #C29D59;
+}
+
+.pack-img img{
+    transition: .5s;
+}
+.pack-img {
+    background-color: #C29D59;
+}
+.package-inner:hover .pack-img img {
+    transform: scale(1.02, 1.02);
+    opacity: .7;
+}
+
+
+
+/*********** RESPONSIVE CSS ************/
+@media screen and (max-width:991px){
+    .price {
+        height: 50px;
+        border-radius: unset;
+        line-height: 47px;
+        top: 25%;
+    }
+    .package-inner .details{
+        height: 370px;
+    }
+
+    p.facilities {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:767px){
+    p.facilities {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:575px){
+    .pack-img img {
+        width: 100%;
+        display: block;
+    }
+}

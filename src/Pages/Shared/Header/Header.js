@@ -33,7 +33,7 @@ const Header = () => {
                             <Col md={4} sm={12} xs={12}>
                                 <div className="top-bar-right-inner">
                                     <Link to='/login'>Login</Link>
-                                    <Link to='/signup' className='before-effect'>Signup</Link>
+                                    <Link to='/login' className='before-effect'>Logout</Link>
                                 </div>
                             </Col>
                         </Row>

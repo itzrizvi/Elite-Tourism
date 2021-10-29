@@ -1,0 +1,39 @@
+import React from 'react';
+import { Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFan, faHamburger, faMapMarker, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
+import './Package.css';
+
+
+const Package = ({ eachPackage }) => {
+    // Destructuring from Props
+    const { img, name, destination, duration, pernight } = eachPackage;
+
+    //Font Awesome Icons
+    const markerIcon = <FontAwesomeIcon icon={faMapMarker} />
+    const planeIcon = <FontAwesomeIcon icon={faPlaneDeparture} />
+    const foodIcon = <FontAwesomeIcon icon={faHamburger} />
+    const fanIcon = <FontAwesomeIcon icon={faFan} />
+
+    return (
+        <Col md={4} sm={6} xs={12} className='mb-5'>
+            <div className="package-inner">
+                <div className="pack-img">
+                    <img src={img} alt="PackageImg" className='img-fluid' />
+                </div>
+                <div className="details">
+                    <div className="price">
+                        <p>{pernight}</p>
+                    </div>
+                    <p className='destination'>{markerIcon} {destination}</p>
+                    <h2>{name}</h2>
+                    <p className="duration">{duration}</p>
+                    <p className="facilities"><span>{planeIcon}</span> Airport, <span>{foodIcon}</span> Foods, <span>{fanIcon}</span> AC</p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </Col>
+    );
+};
+
+export default Package;

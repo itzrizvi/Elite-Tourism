@@ -1,0 +1,97 @@
+/******** Why Choose Us Section CSS *********/
+
+.whychoose-img{
+    background-image: url('https://i.ibb.co/SnHj52x/whychoose01.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 450px;
+    margin-top: 130px;
+    box-shadow: 4px 5px 10px -1px #c29d59;
+}
+
+.whychoose-img img{
+    position: absolute;
+    left: -31%;
+    top: -18%;
+    box-shadow: 4px 5px 10px -1px #c29d59;
+}
+
+
+/* WHY CHOOSE DETAILS CSS */
+.why-choose-details {
+    padding: 50px 30px;
+}
+
+.why-title p {
+    color: #C29D59;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.why-title h2 {
+    font-size: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.why-title h2 span {
+    color: #C29D59;
+}
+
+.why-desc {
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.why-icon-box p.icon {
+    font-size: 30px;
+    background-color: #c29d59;
+    display: inline-block;
+    color: #FFFFFF;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 60px;
+}
+
+.why-icon-box h2 {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #c29d59;
+}
+
+p.detail {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+
+
+/************ Responsive CSS *************/
+@media screen and (max-width:767px){
+    .whychoose-img img {
+        left: -8%;
+        top: -30%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .whychoose-img{
+        height: 310px;
+    }
+    .why-title h2{
+        font-size: 20px;
+    }
+
+}
