@@ -9,7 +9,7 @@ const PrivateRoute = ({ children, ...rest }) => {
     // For Delaying tje loading data and showing spinner
     const { user, isLoading } = useAuth();
     if (isLoading) {
-        return <Spinner className='my-3' animation="grow" variant="info" />;
+        return <Spinner className='my-3 spinner' animation="grow" variant="info" />;
     }
     return (
         // Route and set the private rout with condition and redirection

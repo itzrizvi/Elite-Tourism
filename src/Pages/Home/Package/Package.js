@@ -3,11 +3,12 @@ import { Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFan, faFlag, faHamburger, faMapMarker, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
 import './Package.css';
+import { Link } from 'react-router-dom';
 
 
 const Package = ({ eachPackage }) => {
     // Destructuring from Props
-    const { img, name, destination, duration, pernight } = eachPackage;
+    const { img, name, destination, duration, pernight, _id } = eachPackage;
 
     //Font Awesome Icons
     const markerIcon = <FontAwesomeIcon icon={faMapMarker} />
@@ -30,7 +31,10 @@ const Package = ({ eachPackage }) => {
                     <h2>{name}</h2>
                     <p className="duration">{duration}</p>
                     <p className="facilities"><span>{planeIcon}</span> Airport, <span>{foodIcon}</span> Foods, <span>{fanIcon}</span> AC</p>
-                    <button >{flagIcon} Book Now</button>
+                    <Link to={`/packagedetails/${_id}`}>
+                        <button >{flagIcon} Book Now</button>
+                    </Link>
+
                 </div>
             </div>
         </Col>

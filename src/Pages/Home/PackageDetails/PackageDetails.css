@@ -1,0 +1,85 @@
+/********** Package Details CSS **********/
+.package-details-section{
+    background: #f2efe9 url('../../../images/packagebg/pattern.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.package-detail-img img {
+    width: 100%;
+    box-shadow: 4px 5px 10px -1px #c29d59;
+    border-radius: 8px;
+}
+
+.package-detail-title h2 {
+    font-size: 30px;
+    color: #c29d59;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.package-detail-overview h3 {
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.package-detail-overview {
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.booking-form {
+    background-color: rgba(194, 157, 89, 0.4);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: -4px 7px 13px -1px #c29d59;
+}
+
+.booking-form form input {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.booking-form h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #FFFFFF;
+    padding-bottom: 10px;
+}
+
+input.booktrip-btn {
+    background-color: #c29d59;
+    color: #ffffff;
+    transition: .5s;
+    border: 1px solid transparent !important;
+    font-weight: 600;
+}
+
+input.booktrip-btn:hover {
+    background-color: transparent;
+    border: 1px solid #c29d59 !important;
+}
+
+.spinner {
+    width: 50px !important;
+    height: 50px !important;
+    margin: auto !important;
+    display: block !important;
+    background-color: #c29d59 !important;
+}
+
+.package-detail-inner {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 4px 5px 10px -1px #c29d59;
+}
