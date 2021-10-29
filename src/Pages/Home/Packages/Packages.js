@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import usePackages from '../../../hooks/usePackages';
 import Package from '../Package/Package';
 import './Packages.css';
 
 const Packages = () => {
-    const [packages, setPackages] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/packages')
-            .then(res => res.json())
-            .then(data => setPackages(data));
-    }, []);
+    // Using usePackages hook for Getting Data
+    const { packages } = usePackages({});
 
     return (
         <div className='packages-section pt-4 pb-5'>

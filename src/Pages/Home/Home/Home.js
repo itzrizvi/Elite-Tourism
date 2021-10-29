@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import Counter from '../Counter/Counter';
 import Packages from '../Packages/Packages';
 import WhyChooseUs from '../WhyChoose/WhyChooseUs';
 
@@ -10,6 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <WhyChooseUs></WhyChooseUs>
             <Packages></Packages>
+            <Counter></Counter>
         </>
     );
 };

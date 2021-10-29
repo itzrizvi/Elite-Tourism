@@ -3,13 +3,18 @@ import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faClock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import useAuth from '../../../hooks/useAuth';
 
 // Header Component
 const Header = () => {
     // FontAwesome Icons
     const clockIcon = <FontAwesomeIcon icon={faClock} />;
     const envIcon = <FontAwesomeIcon icon={faEnvelope} />;
+
+    // useAuth for user and Logout function
+    const { user, logOut } = useAuth();
+
 
     // Active Style for Menu
     const activeLink = {
@@ -32,8 +37,11 @@ const Header = () => {
                             </Col>
                             <Col md={4} sm={12} xs={12}>
                                 <div className="top-bar-right-inner">
-                                    <Link to='/login'>Login</Link>
-                                    <Link to='/login' className='before-effect'>Logout</Link>
+                                    {user?.email && <Link to='/home'>
+                                        <img src={user?.photoURL} alt="USERPHOTO" /></Link>}
+                                    {user?.email && <Link to='/home'>{user?.displayName}</Link>}
+                                    {user?.email ? <button onClick={logOut} className='before-effect'>Logout</button> :
+                                        <Link to='/login' className='before-effect'>Login</Link>}
                                 </div>
                             </Col>
                         </Row>
@@ -53,7 +61,6 @@ const Header = () => {
                                     <Navbar.Collapse className='justify-content-end nav-menu'>
                                         <Nav.Link activeStyle={activeLink} as={NavLink} to="/home">Home</Nav.Link>
                                         <Nav.Link activeStyle={activeLink} as={NavLink} to="/about">About</Nav.Link>
-                                        <Nav.Link activeStyle={activeLink} as={NavLink} to="/packages">Packages</Nav.Link>
                                         <Nav.Link activeStyle={activeLink} as={NavLink} to="/contact">Contact</Nav.Link>
                                     </Navbar.Collapse>
                                 </Navbar>

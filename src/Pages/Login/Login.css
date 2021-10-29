@@ -1,0 +1,51 @@
+/******************* LOGIN CSS ******************/ 
+
+.login-form{
+    background: #f2efe9 url('../../images/packagebg/pattern.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+button.google-btn,
+button.github-btn{
+    text-decoration: none;
+    background-color: #c29d59;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px 25px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: .3s;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+button.google-btn:hover,
+button.github-btn:hover{
+    border: 1px solid #c29d59;
+    background-color: transparent;
+    color: #c29d59;
+}
+
+button.google-btn, button.github-btn {
+    display: inline-block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+/********** RESPONSIVE CSS ***********/
+
+
+@media screen and (max-width:429px){
+    button.google-btn{
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    button.github-btn{
+        margin-left: 0px !important;
+    }
+}

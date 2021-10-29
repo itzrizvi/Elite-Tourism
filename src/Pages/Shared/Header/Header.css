@@ -36,7 +36,17 @@ ul.schedule-list li span {
     text-align: right;
 }
 
-.top-bar-right-inner a {
+.top-bar-right-inner button:focus:not(:focus-visible){
+    border:1px solid transparent !important;
+    border-left: 1px solid #c29d59 !important;
+}
+.top-bar-right-inner button{
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid #c29d59 !important;
+    outline: none;
+}
+.top-bar-right-inner a, .top-bar-right-inner button {
     text-decoration: none;
     padding: 0px 8px;
     color: #FFFFFF;
@@ -45,14 +55,18 @@ ul.schedule-list li span {
     transition: .5s;
 }
 
-.top-bar-right-inner a:hover{
+.top-bar-right-inner a:hover, .top-bar-right-inner button:hover{
     color: #c29d59;
 }
 
 a.before-effect {
     border-left: 2px solid #c29d59;
 }
-
+.top-bar-right-inner img {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #FFFFFF;
+}
 /* Nav Menu CSSS */
 
 .logo h2 span {

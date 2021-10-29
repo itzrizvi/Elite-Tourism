@@ -34,7 +34,6 @@ const Footer = () => {
                                 <Nav className="d-block foot-nav-menu">
                                     <Nav.Link as={Link} to="/home">Home</Nav.Link>
                                     <Nav.Link as={Link} to="/about">About</Nav.Link>
-                                    <Nav.Link as={Link} to="/packages">Packages</Nav.Link>
                                     <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                                 </Nav>
                             </Navbar>

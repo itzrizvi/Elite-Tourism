@@ -1,0 +1,86 @@
+/*********** About CSS ************/
+ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+/******** TEAM MEMBER AREA CSS *********/
+.team-inner {
+    box-shadow: 5px 10px 13px -7px #C29D59;
+    background-color: #FFFFFF;
+    transition: .5s;
+    border: 1px solid transparent;
+    padding-top: 10px;
+}
+
+.team-section {
+    background: #f2efe9 url('../../images/packagebg/pattern.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.team-img img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    transform: scale(1, 1);
+    transition: .5s;
+}
+
+.team-img {
+    margin-bottom: 25px;
+}
+
+.team-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-details h3 {
+    color: #C29D59;
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.team-details p {
+    font-size: 15px;
+    color: #C29D59;
+    margin-bottom: 25px;
+}
+
+ul.team-social-list {
+    text-align: center;
+    justify-content: center;
+}
+
+ul.team-social-list li {
+    list-style: none;
+}
+
+ul.team-social-list li a {
+    color: #C29D59;
+    font-size: 22px;
+    padding: 7px;
+    text-align: center !important;
+    transition: .5s;
+    border: 1px solid transparent;
+}
+
+ul.team-social-list li a:hover {
+    background-color: #C29D59;
+    color: #FFFFFF;
+    border: 1px solid #C29D59;
+}
+
+.team-inner:hover {
+    border: 1px solid #C29D59;
+}
+
+
+/********** RESPONSIVE CSS *********/
+@media screen and (max-width:991px){
+    ul.team-social-list{
+        padding: 0px;
+    }
+}

@@ -1,0 +1,55 @@
+/********* COUNTER CSS ***********/
+.counter-section{
+    background-image: url('../../../images/counterbg/map-pattern.png');
+    background-repeat: no-repeat;
+    background-position:center top;
+    padding: 40px 0px;
+    margin-top: 50px;
+}
+
+.counter-inner {
+    color: #c29d59;
+    margin-bottom: 30px;
+}
+
+button.counter-detail-btn {
+    margin-top: 13px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #C29D59;
+    padding: 6px 30px;
+    transition: .5s;
+    border: 1px solid transparent;
+}
+
+button.counter-detail-btn:hover{
+    background-color: transparent;
+    border: 1px
+    solid #C29D59;
+    color: #C29D59;
+}
+
+button.counter-detail-btn a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+button.counter-detail-btn:hover > a {
+    color: #C29D59;
+}
+
+p.counter-detail {
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 400;
+}
+
+p.counter-icon {
+    font-size: 50px;
+}
+
+.counter-inner h4 {
+    font-size: 25px;
+}
