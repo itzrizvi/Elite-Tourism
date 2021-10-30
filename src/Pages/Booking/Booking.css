@@ -1,6 +1,12 @@
 /*********** Booking CSS *************/
 
-.booked-img img {width: 80%;margin: auto;display: block;border-radius: 6px;box-shadow: 4px 5px 10px -1px #c29d59;}
+.booked-img img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 4px 5px 10px -1px #c29d59;
+}
 
 .booked-details h2 {
     font-size: 24px;
@@ -30,4 +36,11 @@
     background-color: transparent;
     border: 1px solid #C29D59;
     color: #C29D59;
+}
+
+/********* Responsive CSS ***********/
+@media screen and (max-width:767px){
+    .booked-img img{
+        width: 100%;
+    }
 }

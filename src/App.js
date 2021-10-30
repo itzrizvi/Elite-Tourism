@@ -6,6 +6,7 @@ import Contact from './Pages/Contact/Contact';
 import Home from './Pages/Home/Home/Home';
 import PackageDetails from './Pages/Home/PackageDetails/PackageDetails';
 import Login from './Pages/Login/Login';
+import ManageOrders from './Pages/ManageOrders/ManageOrders';
 import MyBookings from './Pages/MyBookings/MyBookings';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -46,6 +47,11 @@ function App() {
             {/* Private Rout */}
             <PrivateRoute path="/mybookings">
               <MyBookings></MyBookings>
+            </PrivateRoute>
+
+            {/* Private Rout */}
+            <PrivateRoute path="/manageorders">
+              <ManageOrders></ManageOrders>
             </PrivateRoute>
 
             <Route path='/login'>

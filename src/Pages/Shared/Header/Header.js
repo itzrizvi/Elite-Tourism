@@ -63,6 +63,7 @@ const Header = () => {
                                         <Nav.Link activeStyle={activeLink} as={NavLink} to="/about">About</Nav.Link>
                                         <Nav.Link activeStyle={activeLink} as={NavLink} to="/contact">Contact</Nav.Link>
                                         {user?.email && <Nav.Link activeStyle={activeLink} as={NavLink} to="/mybookings">My Bookings</Nav.Link>}
+                                        {user?.email && <Nav.Link activeStyle={activeLink} as={NavLink} to="/manageorders">Manage Orders</Nav.Link>}
                                     </Navbar.Collapse>
                                 </Navbar>
                             </Row>
