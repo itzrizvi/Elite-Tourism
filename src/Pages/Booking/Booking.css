@@ -1,0 +1,33 @@
+/*********** Booking CSS *************/
+
+.booked-img img {width: 80%;margin: auto;display: block;border-radius: 6px;box-shadow: 4px 5px 10px -1px #c29d59;}
+
+.booked-details h2 {
+    font-size: 24px;
+    color: #c29d59;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+
+.booked-details h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.booked-details button {
+    margin-top: 13px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #C29D59;
+    padding: 6px 30px;
+    transition: .5s;
+    border: 1px solid transparent;
+}
+
+.booked-details button:hover {
+    background-color: transparent;
+    border: 1px solid #C29D59;
+    color: #C29D59;
+}

@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { useForm } from '../../../../node_modules/react-hook-form/dist/index.cjs';
+import useAuth from '../../../hooks/useAuth.js';
 import './PackageDetails.css';
 
 const PackageDetails = () => {
+    // Using useAuth for Default Value
+    const { user } = useAuth();
+    const { uid } = user;
     // Using useParams Hook for dynamic ID
     const { packageID } = useParams();
     // Set State For Selected Service Details
@@ -14,12 +18,31 @@ const PackageDetails = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setSinglePackage(data));
-    }, [])
+    }, [packageID]);
 
     // USING HOOK FORM
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        const orderView = 'Pending';
+        const userID = uid;
+        data.order = singlePackage;
+        data.orderStatus = orderView;
+        data.userID = userID;
+
+        fetch(`http://localhost:5000/orders/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Your Booking Has Been Placed Successfully!!');
+                    reset();
+                }
+            })
     };
     return (
         <>
@@ -46,9 +69,13 @@ const PackageDetails = () => {
                             <div className="booking-form">
                                 <h2 className='text-center text-uppercase'>Book Your Trip</h2>
                                 <form onSubmit={handleSubmit(onSubmit)}>
-                                    <input {...register("firstName", { required: true })} placeholder='First Name...' />
-                                    <input {...register("lastName", { required: true })} placeholder='Last Name...' />
+                                    {errors.fullName && <span style={{ display: 'block', textAlign: 'center', color: '#FFFFFF', fontWeight: '600' }}>Name field is required</span>}
+                                    <input {...register("fullName", { required: true })} defaultValue={user.displayName} placeholder='Full Name...' />
+                                    {errors.email && <span style={{ display: 'block', textAlign: 'center', color: '#FFFFFF', fontWeight: '600' }}>Email field is required</span>}
+                                    <input {...register("email", { required: true })} defaultValue={user.email} placeholder='Email...' />
+                                    {errors.address && <span style={{ display: 'block', textAlign: 'center', color: '#FFFFFF', fontWeight: '600' }}>Address field is required</span>}
                                     <input {...register("address", { required: true })} placeholder='Address...' />
+                                    {errors.phone && <span style={{ display: 'block', textAlign: 'center', color: '#FFFFFF', fontWeight: '600' }}>Number field is required</span>}
                                     <input type="number" {...register("phone", { required: true })} placeholder='Phone...' />
                                     <input type="submit" value="BOOK" className='booktrip-btn' />
                                 </form>
