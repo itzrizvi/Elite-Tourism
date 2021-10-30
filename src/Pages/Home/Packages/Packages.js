@@ -21,7 +21,7 @@ const Packages = () => {
                 <Row>
                     {
                         packages.map(eachPackage => <Package
-                            key={eachPackage.key}
+                            key={eachPackage._id}
                             eachPackage={eachPackage}></Package>)
                     }
                 </Row>

@@ -5,7 +5,6 @@ import { Col } from 'react-bootstrap';
 import './ManageSingleOrder.css'
 
 const ManageSingleOrder = ({ order }) => {
-    console.log(order);
     // Destructuring Individual Data
     const { fullName, email, orderStatus, _id } = order;
     const { img, name, destination, duration, pernight } = order.order;

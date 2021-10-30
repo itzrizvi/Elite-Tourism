@@ -25,9 +25,9 @@ const Header = () => {
         <>
             <header className='head-main'>
                 <div className="top-bar">
-                    <Container>
+                    <Container fluid>
                         <Row>
-                            <Col md={8} sm={12} xs={12}>
+                            <Col md={7} sm={12} xs={12}>
                                 <div className="top-bar-left-inner">
                                     <ul className="schedule-list d-flex">
                                         <li><span>{clockIcon}</span> Mon - Sat: 9.30am To 10.00pm</li>
@@ -35,11 +35,12 @@ const Header = () => {
                                     </ul>
                                 </div>
                             </Col>
-                            <Col md={4} sm={12} xs={12}>
+                            <Col md={5} sm={12} xs={12}>
                                 <div className="top-bar-right-inner">
                                     {user?.email && <Link to='/home'>
                                         <img src={user?.photoURL} alt="USERPHOTO" /></Link>}
                                     {user?.email && <Link to='/home'>{user?.displayName}</Link>}
+                                    {user?.email && <Link to='/manageorders'>Manage Orders</Link>}
                                     {user?.email ? <button onClick={logOut} className='before-effect'>Logout</button> :
                                         <Link to='/login' className='before-effect'>Login</Link>}
                                 </div>
@@ -61,9 +62,9 @@ const Header = () => {
                                     <Navbar.Collapse className='justify-content-end nav-menu'>
                                         <Nav.Link activeStyle={activeLink} as={NavLink} to="/home">Home</Nav.Link>
                                         <Nav.Link activeStyle={activeLink} as={NavLink} to="/about">About</Nav.Link>
-                                        <Nav.Link activeStyle={activeLink} as={NavLink} to="/contact">Contact</Nav.Link>
                                         {user?.email && <Nav.Link activeStyle={activeLink} as={NavLink} to="/mybookings">My Bookings</Nav.Link>}
-                                        {user?.email && <Nav.Link activeStyle={activeLink} as={NavLink} to="/manageorders">Manage Orders</Nav.Link>}
+                                        {user?.email && <Nav.Link activeStyle={activeLink} as={NavLink} to="/addpackage">Add Package</Nav.Link>}
+                                        <Nav.Link activeStyle={activeLink} as={NavLink} to="/contact">Contact</Nav.Link>
                                     </Navbar.Collapse>
                                 </Navbar>
                             </Row>

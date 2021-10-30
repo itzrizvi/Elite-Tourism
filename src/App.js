@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
 import About from './Pages/About/About';
+import AddPackage from './Pages/AddPackage/AddPackage';
 import Contact from './Pages/Contact/Contact';
 import Home from './Pages/Home/Home/Home';
 import PackageDetails from './Pages/Home/PackageDetails/PackageDetails';
@@ -52,6 +53,11 @@ function App() {
             {/* Private Rout */}
             <PrivateRoute path="/manageorders">
               <ManageOrders></ManageOrders>
+            </PrivateRoute>
+
+            {/* Private Rout */}
+            <PrivateRoute path="/addpackage">
+              <AddPackage></AddPackage>
             </PrivateRoute>
 
             <Route path='/login'>
