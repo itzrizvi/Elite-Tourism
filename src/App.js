@@ -9,6 +9,7 @@ import PackageDetails from './Pages/Home/PackageDetails/PackageDetails';
 import Login from './Pages/Login/Login';
 import ManageOrders from './Pages/ManageOrders/ManageOrders';
 import MyBookings from './Pages/MyBookings/MyBookings';
+import NotFound from './Pages/NotFound/NotFound';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -62,6 +63,10 @@ function App() {
 
             <Route path='/login'>
               <Login></Login>
+            </Route>
+
+            <Route path='*'>
+              <NotFound></NotFound>
             </Route>
 
           </Switch>

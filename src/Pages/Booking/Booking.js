@@ -1,7 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Spinner } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
 import './Booking.css';
 
 const Booking = ({ individualOrders, order }) => {
@@ -33,6 +34,12 @@ const Booking = ({ individualOrders, order }) => {
                     }
                 });
         }
+    }
+
+    // Using Spinner when Rendering Home data
+    const { isLoading } = useAuth();
+    if (isLoading) {
+        return <Spinner className='my-3 spinner' animation="grow" variant="info" />;
     }
     return (
         <Col md={12} sm={12} xs={12}>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Col } from 'react-bootstrap';
+import { Col, Spinner } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
 import './ManageSingleOrder.css'
 
 const ManageSingleOrder = ({ order }) => {
@@ -58,6 +59,12 @@ const ManageSingleOrder = ({ order }) => {
                 }
             });
 
+    }
+
+    // Using Spinner when Rendering Home data
+    const { isLoading } = useAuth();
+    if (isLoading) {
+        return <Spinner className='my-3 spinner' animation="grow" variant="info" />;
     }
     return (
         <Col md={4} sm={6} xs={12} className='mb-5'>

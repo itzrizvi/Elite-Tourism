@@ -1,9 +1,10 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import { Col, Spinner } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFan, faFlag, faHamburger, faMapMarker, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
 import './Package.css';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 
 const Package = ({ eachPackage }) => {
@@ -16,6 +17,12 @@ const Package = ({ eachPackage }) => {
     const foodIcon = <FontAwesomeIcon icon={faHamburger} />
     const fanIcon = <FontAwesomeIcon icon={faFan} />
     const flagIcon = <FontAwesomeIcon icon={faFlag} />
+
+    // Using Spinner when Rendering package data
+    const { isLoading } = useAuth();
+    if (isLoading) {
+        return <Spinner className='my-3 spinner' animation="grow" variant="info" />;
+    }
 
     return (
         <Col md={4} sm={6} xs={12} className='mb-5'>
