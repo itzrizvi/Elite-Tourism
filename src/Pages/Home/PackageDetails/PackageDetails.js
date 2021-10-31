@@ -14,7 +14,7 @@ const PackageDetails = () => {
     // Set State For Selected Service Details
     const [singlePackage, setSinglePackage] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/packages/${packageID}`;
+        const url = `https://sheltered-bastion-99372.herokuapp.com/packages/${packageID}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setSinglePackage(data));
@@ -29,7 +29,7 @@ const PackageDetails = () => {
         data.orderStatus = orderView;
         data.userID = userID;
 
-        fetch(`http://localhost:5000/orders/`, {
+        fetch(`https://sheltered-bastion-99372.herokuapp.com/orders/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

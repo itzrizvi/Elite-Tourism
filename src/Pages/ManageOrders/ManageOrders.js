@@ -9,7 +9,7 @@ const ManageOrders = () => {
     // Fetching orders with state
     const [allOrders, setAllOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders/')
+        fetch('https://sheltered-bastion-99372.herokuapp.com/orders/')
             .then(res => res.json())
             .then(data => setAllOrders(data));
     }, [])

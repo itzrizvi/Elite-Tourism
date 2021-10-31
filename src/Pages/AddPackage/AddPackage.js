@@ -8,7 +8,7 @@ const AddPackage = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         console.log(data);
-        fetch(`http://localhost:5000/packages/`, {
+        fetch(`https://sheltered-bastion-99372.herokuapp.com/packages/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

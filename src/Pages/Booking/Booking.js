@@ -10,7 +10,7 @@ const Booking = ({ individualOrders, order }) => {
     // Fetching orders with state
     const [allOrders, setAllOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders/')
+        fetch('https://sheltered-bastion-99372.herokuapp.com/orders/')
             .then(res => res.json())
             .then(data => setAllOrders(data));
     }, []);
@@ -19,7 +19,7 @@ const Booking = ({ individualOrders, order }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are You sure you want to delete this Booking??');
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://sheltered-bastion-99372.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

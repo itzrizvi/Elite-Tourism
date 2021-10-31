@@ -12,7 +12,7 @@ const ManageSingleOrder = ({ order }) => {
     // Fetching orders with state
     const [allOrders, setAllOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders/')
+        fetch('https://sheltered-bastion-99372.herokuapp.com/orders/')
             .then(res => res.json())
             .then(data => setAllOrders(data));
     }, []);
@@ -21,7 +21,7 @@ const ManageSingleOrder = ({ order }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are You sure you want to delete this Booking??');
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://sheltered-bastion-99372.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
@@ -40,7 +40,7 @@ const ManageSingleOrder = ({ order }) => {
     // Approve Pending Status
     const handleStatusChange = id => {
         console.log(id)
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://sheltered-bastion-99372.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

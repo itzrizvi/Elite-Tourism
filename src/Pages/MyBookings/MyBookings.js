@@ -9,7 +9,7 @@ const MyBookings = () => {
     const { user } = useAuth();
     const { uid } = user;
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${uid}`)
+        fetch(`https://sheltered-bastion-99372.herokuapp.com/orders/${uid}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [uid]);
